@@ -4,18 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        /* ודא שה-HTML וה-body תופסים 100% מהמסך */
-        html, body {
+        /* הבטחת שליטה מלאה על כל האלמנטים */
+        * {
             margin: 0;
             padding: 0;
-            width: 100%;
-            height: 100%;
+            box-sizing: border-box;
         }
 
-        /* ודא שה-iframe תופס 100% מהחלל */
-        iframe {
+        /* הגדלת גוף הדף וה-HTML ל-100% */
+        html, body {
             width: 100%;
             height: 100%;
+            overflow: hidden; /* למניעת גלילות */
+        }
+
+        /* הגדרת iframe שיתפוס את כל המסך */
+        iframe {
+            display: block; /* ביטול רווחים נוספים */
+            width: 100vw; /* 100% מרוחב חלון הצפייה */
+            height: 100vh; /* 100% מגובה חלון הצפייה */
             border: none;
         }
     </style>
